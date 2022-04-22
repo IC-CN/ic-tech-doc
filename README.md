@@ -30,37 +30,67 @@ Actor Model: 参与者模式
 
 ## B
 
-### Balance: `余额`
+```
+Balance: 余额
+```
 
-### Beneficiary: `账号持有者`
+```
+Beneficiary: 账号持有者
+```
 
-### Blockchain: `区块链`
+```
+Blockchain: 区块链
+```
 
-### Boundary Nodes: `边界节点`
+```
+Boundary Nodes: 边界节点
+```
 
-### Burning Transaction: `销毁交易`
+```
+Burning Transaction: 销毁交易
+```
 
 ## C
 
-### Candid: `Candid`
+```
+Candid: Candid
+```
 
-### Canister: `容器`
+```
+Canister: 容器
+```
 
-### Canister Account: `容器账号`
+```
+Canister Account: 容器账号
+```
 
-### Canister Identifier: `容器ID`
+```
+Canister Identifier: 容器ID
+```
 
-### Canister Signature: `容器签名`
+```
+Canister Signature: 容器签名
+```
 
-### Canister State: `容器状态`
+```
+Canister State: 容器状态
+```
 
-### Catch-up Package (CUP): `同步包`
+```
+Catch-up Package (CUP): 同步包
+```
 
-### Certified Query: `可认证查询`
+```
+Certified Query: 可认证查询
+```
 
-### Certified Variable: `可认证变量`
+```
+Certified Variable: 可认证变量
+```
 
-### Chain Key Cryptography: `链钥密码学`
+```
+Chain Key Cryptography: 链钥密码学
+```
 
 ### Consensus: `共识`
 
