@@ -205,7 +205,7 @@ Distributed Key Generation (DKG)：分布式密钥生成器
 Dissolve Delay: 溶解延迟
 ```
 
-- The dissolve delay is the amount of time that neurons must spend dissolving before becoming disolved.
+- The dissolve delay is the amount of time that neurons must spend dissolving before becoming dissolved.
 
 ```
 Dissolved State: 溶解完成状态
@@ -216,7 +216,7 @@ Dissolved State: 溶解完成状态
 ```
 Dissolving State: 溶解进行状态
 ```
-- A dissolving state is a neuron state that follows immediately after its owner issues a "start dissolving" command, and continues until a "stop dissolving" command is issued, or until the dissolve delay timer runs out. The age of a dissolving neuron is considered to be zero.
+- A dissolving state is a neuron state that follows immediately after its owner issues a "start dissolving" command and continues until a "stop dissolving" command is issued, or until the dissolve delay timer runs out. The age of a dissolving neuron is considered to be zero.
 
 
 ## E
@@ -241,7 +241,7 @@ Fast Forwarding: 快进
 Fiduciary: 账号受托者
 ```
 
-- The fiduciary of an account is the principal allowed to make transactions on the account; as such, it may be useful to think of it as the owner of the account, with the caveat that it may or may not be the beneficiary of the account. The neuron account is a prominent example of an account for which the beneficiary and fiduciary do not coincide (the fiduciary is the governance canister while the beneficiary is the neuron holder). The fiduciary of a (ledger) account does not change over time. The distinction between fiduciary and beneficiary is also important for DeFi dapps (canisters) that interact with the IC ledger: in this case, the fiduciary is the DeFi canister while the beneficiary is the individual or organization ([[#principal|principal) that uses the DeFi canister’s services.
+- The fiduciary of an account is the principal allowed to make transactions on the account; as such, it may be useful to think of it as the owner of the account, with the caveat that it may or may not be the beneficiary of the account. The neuron account is a prominent example of an account for which the beneficiary and fiduciary do not coincide (the fiduciary is the governance canister while the beneficiary is the neuron holder). The fiduciary of a (ledger) account does not change over time. The distinction between fiduciary and beneficiary is also important for DeFi dapps (canisters) that interact with the IC ledger: in this case, the fiduciary is the DeFi canister while the beneficiary is the individual or organization that uses the DeFi canister’s services.
 
 ```
 Finalization： 最终确认
@@ -301,7 +301,8 @@ Immutability: 不变性
 Internet Identity: 互联网身份
 ```
 
-- Internet Identity is an anonymizing blockchain authentication system running on the Internet Computer.
+- [互联网身份](https://identity.ic0.app)是一个运行在`互联网计算机`上的匿名化的身份验证系统。
+- [Internet Identity](https://identity.ic0.app/#authorize) is an anonymizing blockchain authentication system running on the Internet Computer.
 
 ```
 Induction Pool: 导入池
@@ -331,12 +332,14 @@ Input Queue: 输入队列
 Inter-canister Message: 容器间消息
 ```
 
+- `容器间消息`指的是从一个`容器`被发送到另外一个`容器`的消息。它跟用户启动的`入口消息`不同。
 - An inter-canister message is a message sent from one canister to another. Inter-canister messages are different from user-initiated ingress messages.
 
 ```
 Internet Computer (IC): 互联网计算机
 ```
 
+- `互联网计算机`是一个去中心化的`区块链`，通过独立`节点供应商`在区域分布的`数据中心`来为部署在区块链上的`容器``智能合约`提供可扩展的计算能力。
 - The Internet Computer (IC) is a decentralized blockchain that provides scalable compute capacity for running canisters through independent node providers running nodes in geographically distributed data centers.
 
 ## J
