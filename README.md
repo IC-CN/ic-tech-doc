@@ -6,108 +6,108 @@ By `Paul Liu`, `Andrew Tang`, `Vincent Zhang`, `Qi Jia`, `Herbert Yang`, DFINITY
 
 # 核心词汇表 Glossary
 
+[(original wiki glossary in English)](https://wiki.internetcomputer.org/wiki/Glossary)
+
 ## A 
 
-### Account
+### Account: `账号`
+- A ledger account is a set of entries in the ledger canister, which is a smart contract that mimics the guise and behavior of a regular banking account, whose unit of measure is ICP (Internet Computer Protocol) utility tokens. Ledger accounts are owned by principals, and their ownerships do not change over time. Every account on the ledger has a positive balance measured in ICP with a precision of eight decimals.
 
-### Address
+### Address: `地址`
 
-### Actor 
+### Actor Model: `参与者模式`
 
 ## B
 
-### Balance
+### Balance: `余额`
 
-### Batch
+### Beneficiary: `账号持有者`
 
-### Beneficiary
+### Blockchain: `区块链`
 
-### Blockchain
+### Boundary Nodes: `边界节点`
 
-### Boundary Nodes
-
-### Burning Transaction
+### Burning Transaction: `销毁交易`
 
 ## C
 
-### Candid
+### Candid: `Candid`
 
-### Canister
+### Canister: `容器`
 
-### Canister Account
+### Canister Account: `容器账号`
 
-### Canister Identifier
+### Canister Identifier: `容器ID`
 
-### Canister Signature
+### Canister Signature: `容器签名`
 
-### Canister State
+### Canister State: `容器状态`
 
-### Catch-up Package (CUP)
+### Catch-up Package (CUP): `同步包`
 
-### Certified Query
+### Certified Query: `可认证查询`
 
-### Certified Variable
+### Certified Variable: `可认证变量`
 
-### Chain Key Cryptography
+### Chain Key Cryptography: `链钥密码学`
 
-### Consensus
+### Consensus: `共识`
 
-### Controller
+### Controller: `控制者`
 
-### Cycles
-
+### Cycles: `Cycles`
 
 
 ## D
 
-### Dapp
+### Dapp: `去中心化应用`
 
-### Datacenter
+### Datacenter: `数据中心`
 
-### Dissolve Delay
+### Dissolve Delay: `溶解延迟`
 
-### Dissolve State
+### Dissolve State: `溶解完成状态`
 
-### Dissolving State
+### Dissolving State: `溶解进行状态`
 
 ## E
 
-### Execution Environment
+### Execution Environment: `执行环境`
 
 
 
 ## F
 
-### Fiduciary
+### Fiduciary: `账号受托者`
 
 ## G
 
-### Governance Canister
+### Governance Canister: `治理容器`
  
 
 ## H
 
 ## I
 
-### ICP: 互联网计算机协议
+### ICP: `互联网计算机协议`
 
-### ICP Suply Account
+### ICP Suply Account: `ICP供应账号`
 
-### Identity
+### Identity: `身份`
 
-### Internet Identity: 互联网身份
+### Internet Identity: `互联网身份`
 
-### Induction Pool
+### Induction Pool: `导入池`
 
-### Ingress Message
+### Ingress Message: `入口消息`
 
-### Ingress Message History
+### Ingress Message History: `入口消息历史`
 
-### Input Queue
+### Input Queue: `输入队列`
 
-### Inter-canister Message
+### Inter-canister Message: `容器间消息`
 
-### Internet Computer (IC)
+### Internet Computer (IC): `互联网计算机`
 
 
 ## J
@@ -116,81 +116,93 @@ By `Paul Liu`, `Andrew Tang`, `Vincent Zhang`, `Qi Jia`, `Herbert Yang`, DFINITY
  
 ## L
 
-### Ledger Canister
+### Ledger: `账本`
+
+### Ledger Canister: `账本容器`
  
 ## M
 
-### Message
+### Message: `消息`
 
-### Message Routing
+### Message Routing: `消息路由`
 
-### Minting Transaction
+### Minting Transaction: `铸造交易`
 
-### Motoko
+### Motoko: `Motoko`
 
 ## N
 
-Non-dissolving state
-Network Nervous System (NNS)
-Neuron
-神经元
-Neuron account
-Neuron age
-Node
-Node Providers
+### Non-dissolving State: `非溶解状态`
+
+### Network Nervous System (NNS): `网络神经系统`
+
+### Neuron: `神经元`
+
+### Neuron Account: `神经元账号`
+
+### Neuron Age: `神经元年龄`
+
+### Node: `节点`
+
+### Node Operators: `节点操作者`
+
+### Node Providers: `节点供应商`
 
 ## O
 
-Output queue
+### Output Queue: ` 输入队列`
 
 ## P
 
-Peer-to-peer (P2P)
-Principal
-Proposal
+### Peer-to-peer (P2P): `点对点`
 
-Proto-node
+### Principal: `主体`
+
+### Proposal: `提案`
+
+### Proto-node: `原初节点 `
 
 ## Q
 
-Query
+### Query: `查询`
 
 ## R
 
-Replica
-Registry
+### Replica: `节点副本`
+
+### Registry: `注册表`
 
 ## S
 
-### Smart Contract: 智能合约
+### Smart Contract: `智能合约`
 
-### State Change
+### State Change: `状态改变`
 
-### State Manager
+### State Manager: `状态管理`
 
-### Subnet: 片网
+### Subnet: `子网`
 
-### System Canister
+### System Canister: `系统容器 `
 
 ## T
 
-### Transaction
+### Transaction: `交易`
 
-### Transfer Transaction
+### Transfer Transaction: `转账交易`
 
 ## U
 
-### User: 用户
+### User: `用户`
 
 ## V
 
-### Valid Set rule
+### Valid Set rule: `有效集合规则`
 
-### Voting
+### Voting: `投票`
 
 ## W
 
-### WebAssembly
+### WebAssembly: `WebAssembly`
 
 ## X 
 
