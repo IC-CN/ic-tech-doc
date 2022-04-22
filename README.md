@@ -4,6 +4,8 @@ Internet Computer (IC) Technical Doc
 
 By [Paul Liu](https://github.com/ninegua), [Andrew Tang](https://twitter.com/andrew_lee_tang), [Vincent Zhang](https://github.com/zhangwei983), [Qi Jia](https://github.com/Qijia2Dfinity), [Herbert Yang](https://twitter.com/herbertyang) of [DFINITY Foundation](https://dfinity.org/)
 
+[网页版](https://zire.github.io/ic-tech-doc/)， [源代码](https://github.com/zire/ic-tech-doc)
+
 # 核心词汇表 Glossary
 
 [(original wiki glossary in English)](https://wiki.internetcomputer.org/wiki/Glossary)
