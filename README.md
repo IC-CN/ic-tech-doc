@@ -2,7 +2,7 @@
 
 Internet Computer (IC) Technical Doc
 
-By `Paul Liu`, `Andrew Tang`, `Vincent Zhang`, `Qi Jia`, `Herbert Yang`, DFINITY Foundation
+By [Paul Liu](https://github.com/ninegua), [Andrew Tang](https://twitter.com/andrew_lee_tang), [Vincent Zhang](https://github.com/zhangwei983), [Qi Jia](https://github.com/Qijia2Dfinity), [Herbert Yang](https://twitter.com/herbertyang) of [DFINITY Foundation](https://dfinity.org/)
 
 # 核心词汇表 Glossary
 
@@ -358,6 +358,8 @@ Ledger Canister: 账本容器
 Ledger Canister: 账本容器
 ```
 
+- The ledger canister is a system canister whose main role is to store accounts and their corresponding transactions.
+
 ```
 Liveness： 活性
 ```
@@ -368,17 +370,25 @@ Liveness： 活性
 Message: 消息
 ```
 
+- A message is data sent from one canister to another or from a user to a canister.
+
 ```
 Message Routing: 消息路由
 ```
+
+The message routing layer receives batches from the consensus layer and inducts them into the induction pool. Message routing then schedules a set of canisters to execute messages from their input queues.
 
 ```
 Minting Transaction: 铸造交易
 ```
 
+- A minting transaction is the process of "minting" ICP, whereby a certain amount of ICP comes into existence. ICP is minted in order to reward neurons for voting, and reward node providers for participating in the IC by providing compute capacity through the running of nodes. A minting transaction is represented as a transaction from the ICP supply account to a destination account.
+
 ```
 Motoko: Motoko
 ```
+
+- Motoko is a programming language designed to directly support the programming model of the Internet Computer, making it easier to efficiently build applications and take advantage of some of the more unusual features of this platform, including the Actor Model for smart contracts and compilation to WebAssembly.
 
 ## N
 
@@ -386,33 +396,49 @@ Motoko: Motoko
 Non-dissolving State: 非溶解状态
 ```
 
+- A neuron that is not dissolved or dissolving is said to be in a non-dissolving state (or "aging"). Non-dissolving neurons thus accrue "age", with the caveat that beginning to dissolve at any time reduces this age back to zero. The dissolve delay parameter of a non-dissolving (aka "aging") neuron cannot be zero, because such a neuron would have to already be dissolved.
+
 ```
 Network Nervous System (NNS): 网络神经系统
 ```
+
+- The network nervous system (NNS) is a collection of system canisters (aka "NNS canisters") assembled into a system that governs all aspects of the Internet Computer.
 
 ```
 Neuron: 神经元
 ```
 
+- A neuron is an IC entity that can make proposals and vote on proposals related to the governance of the Internet Computer platform. To provide the stability required for responsible governance, neurons need to store ("stake") a certain amount of ICP in order to be able to make and vote on proposals. This locks the tokens for a period of time, after which it starts dissolving. The ICP stake of a neuron is stored in a neuron account. The neuron owner has the right to propose and vote on governance issues, and is granted rewards for voting in proportion to the amount of ICP staked, and the duration of the dissolve period.
+
 ```
 Neuron Account: 神经元账号
 ```
+
+- A neuron account is a canister account whose beneficiary is a neuron (or the neuron’s owner). The governance canister is the fiduciary of all neuron accounts.
 
 ```
 Neuron Age: 神经元年龄
 ```
 
+- The neuron age is a neuron parameter roughly indicative of the time that has passed since its creation or since when it last entered into a non-dissolving state. Calculation of a neuron’s age needs to take into account whether the neuron has spent time dissolving or dissolved, both of which reset this parameter.
+
 ```
 Node: 节点
 ```
+
+- A node is a physical or virtual network endpoint that hosts all the hardware, replica software, and configuration settings required to participate in the Internet Computer.
 
 ```
 Node Operators: 节点操作者
 ```
 
+- A node operator (NO) is a non-canister principal who has the authority to add/remove nodes to/from the IC. Node providers come in possession of Hardware Security Modules (HSM), and register the HSMs with the NNS. (The HSM registration process consists essentially in deriving an IC principal ID from the key stored on the HSM, and persisting that ID with the NNS.) NPs hand registered HSMs over to legal persons, who now gain the authority to physically “operate nodes” (aka install replicas). The caveat is that, as opposed to "regular" principals, where a great deal of care goes into making sure that one principal ID corresponds to only one person, HSMs can routinely exchange hands, hence many persons can act as the same NO principal at different times.
+
 ```
 Node Providers: 节点供应商
 ```
+
+- A node provider (NP) is a non-canister principal that receives the rewards stemming from node participation to the IC (aka “payout principal”). Usually, though not necessarily, a node provider is the owner of the node, and may also be involved in node operation and related tasks. A node provider may receive rewards from multiple nodes in multiple data centers.
 
 ```
 Notarization：公证
@@ -428,11 +454,15 @@ Orthogonal Persistence： 正交持久化
 Output Queue: 输入队列
 ```
 
+- Each canister has an output queue of messages bound for other canisters.
+
 ## P
 
 ```
 Peer-to-peer (P2P): 点对点
 ```
+
+- In common usage, peer-to-peer (P2P) computing or networking is a distributed application architecture that partitions workload across a network of equally-privileged computer nodes so that participants can contribute resources such as processing power, disk storage, or network bandwidth to handle application workload. The peer-to-peer layer collects and disseminates messages and artifacts from users and from other nodes. The nodes of a subnet form a dedicated peer-to-peer broadcast network that facilitates the secure bounded-time/eventual delivery broadcast of artifacts (such as ingress messages, control messages and their signature shares). The consensus layer builds upon this functionality.
 ```
 Peer-to-Peer Layer： 点对点网络层
 ```
@@ -452,6 +482,8 @@ Per-round Certified State：每轮认证状态
 Principal: 主体
 ```
 
+- A principal is an entity that can be authenticated by the Internet Computer. This is the same sense of the word principal as the Wikipedia definition. Principals that interact with the Internet Computer do so using a certain identity.
+
 ```
 Proof-of-Stake： 持有量证明
 ```
@@ -463,9 +495,14 @@ Proof-of-Work: 工作量证明
 Proposal: 提案
 ```
 
+- A proposal is a statement describing an action to modify certain parameters of the IC, or of any of its subsystems. It is implemented as an IC entity having various attributes, such as an ID, a URL, a summary etc. Proposals are submitted by eligible neuron owners for the consideration of the IC community, and undergo a voting process, following which they can be adopted or rejected. Adopted proposals are then executed. There are several taxonomies of proposals, the most prominent of which groups proposals into "topics," whose adoption, in turn, triggers certain categories of actions, such as the creation of a subnet, the addition of a nodes to a subnet, and the modification of the ICP exchange rate.
+
 ```
 Proto-node: 原初节点
 ```
+
+- A proto-node is an IC entity consisting of a combination of hardware and software, that differs from a node in that it has not yet been registered with the IC. A proto-node is, in short, a "node-in-waiting," hence has all that it takes to be a node except the replica software.
+
 
 ```
 Pseudorandom Generator (PRG): 伪随机数生成器
@@ -476,6 +513,9 @@ Pseudorandom Generator (PRG): 伪随机数生成器
 ```
 Query: 查询
 ```
+
+- A query is an optimised way to execute operations on a canister where the state changes are not preserved. Queries are synchronous and can be made to any node that hosts the canister. Queries do not require consensus to verify the result.
+
 
 ```
 Query Calls：查询调用
@@ -491,9 +531,14 @@ Random Beacon：随机数信标
 Replica: 节点副本
 ```
 
+- The replica is a collection of protocol components that are necessary for a node to participate in a subnet.
+
 ```
 Registry: 注册表
 ```
+
+- The IC registry manages the system meta-data maintained on the network nervous system (NNS) and accessed by all subnet blockchains.
+
 
 ```
 Registry Canister： 注册表容器
@@ -515,6 +560,9 @@ Service Nervous System (SNS): 服务神经系统
 Smart Contract: 智能合约
 ```
 
+- A smart contract is a stateful computer program designed to automatically execute, control or document relevant events and actions according to the terms of a contract or an agreement. A smart contract can be deployed on the Internet Computer in the form of a canister bundling data and code. A canister can have one or more controllers that are permitted to modify the code of the canister, thereby modifying the terms of the smart contract. For a canister smart contract to have immutable code, its list of controllers must be empty.
+
+
 ```
 Staking: 质押
 ```
@@ -522,6 +570,9 @@ Staking: 质押
 ```
 State Change: 状态改变
 ```
+
+- A state change is the result of any transaction, function call, or operation that changes the information stored in a canister. For example, if a function makes an update call that adds two numbers together or removes a name from a list, the result is a change to the canister state.
+
 
 ```
 State Machine: 状态机
@@ -531,6 +582,9 @@ State Machine: 状态机
 State Manager: 状态管理
 ```
 
+- The state manager is responsible for: 1) maintaining (multiple versions of) the replicated state the deterministic state machine implemented by message routing and the execution environment operates on; 2)converting back and forth between the replicated state and its canonical version (latter can be understood independent of the concrete implementation); 3)obtaining certifications of parts of the canonical state, which allow other stakeholders such as other subnets and/or users, to verify that some piece of state indeed originates from a valid subnetwork, and 4) providing capabilities to sync the canonical state with other replicas in the same subnet so that replicas that have fallen behind can catch up.
+
+
 ```
 Synchronous model: 同步模型
 ```
@@ -539,9 +593,14 @@ Synchronous model: 同步模型
 Subnet: 子网
 ```
 
+- A subnet (subnetwork) is a collection of nodes that run their own instance of the consensus algorithm to produce a subnet blockchain that interacts with other subnets of the IC using chain key cryptography.
+
 ```
 System Canister: 系统容器
 ```
+
+- A system canister is a pre-installed canister that performs certain tasks needed to maintain the Internet Computer.
+
 
 ## T
 
@@ -568,15 +627,22 @@ Tokenization: 代币化
 Transaction: 交易
 ```
 
+- A ledger account transaction is the process of transferring ICP from one account to another; it can be of three types: (a) regular transfer transaction, (b) burning transaction, and (c) minting transaction.
+
 ```
 Transfer Transaction: 转账交易
 ```
+
+- A transfer transaction is the process of transferring ICP from any regular ledger account (i.e. any ledger account except the ICP supply account) to another regular ledger account.
 
 ## U
 
 ```
 User: 用户
 ```
+
+- A user is any entity that interacts with the Internet Computer. Users include end-users that use dapps deployed on the IC, dapp developers, holders of ICP utility tokens, and neuron holders.
+
 
 ```
 Update Calls： 更新调用
@@ -588,15 +654,22 @@ Update Calls： 更新调用
 Valid Set rule: 有效集合规则
 ```
 
+- The valid set rule is the rule that determines a valid induction pool. Ingress messages and inter-canister messages must pass certain checks to ensure that the valid set rule is upheld before they can be added to the induction pool.
+
+
 ```
 Voting: 投票
 ```
+
+- Voting is the process through which proposals are selected for adoption and implementation. Its direct participants are the neurons, who both (a) submit proposals and (b) vote on proposals. The voting process is a rather intricate undertaking, involving aspects such as neuron eligibility, voting power, chains of neuron followees etc. This has been designed with security and dependability in mind, and is being continuously improved in order to prevent the concentration of voting power in the hands of just a few neuron owners.
 
 ## W
 
 ```
 WebAssembly: WebAssembly
 ```
+
+- WebAssembly (abbreviated Wasm) is a binary instruction format for a stack-based virtual machine.
 
 ## X 
 
