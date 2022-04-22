@@ -16,10 +16,12 @@ Account: 账号
 
 - A ledger account is a set of entries in the ledger canister, which is a smart contract that mimics the guise and behavior of a regular banking account, whose unit of measure is ICP (Internet Computer Protocol) utility tokens. Ledger accounts are owned by principals, and their ownerships do not change over time. Every account on the ledger has a positive balance measured in ICP with a precision of eight decimals.
 
+
 ```
 Address: 地址
 ```
 
+- 在谈论`账本`的时候，`地址` 跟`账号`是同一个意思。
 - In the context of transactions on the ledger, address is synonymous with account.
 
 ```
@@ -48,12 +50,14 @@ Balance: 余额
 Beneficiary: 账号持有者
 ```
 
+- `账号持有者` 是拥有`账号`余额的`主体`。`账号持有者`不能被变更。一个`账号持有者`有可能被允许对`账号`进行交易操作（见`账号受托者`）。
 - The beneficiary of an account is the principal who owns the balance of the account. The beneficiary of an account cannot be changed. The beneficiary of an account may or may not be allowed to make transactions on the account (see fiduciary).
 
 ```
 Blockchain: 区块链
 ```
 
+- `区块链`是一列不断扩展的，通过加密技术链接在一起，经过`共识协议`确认的的很多区块的集合。在`互联网计算机`上，每个`子网`都是一条`区块链`，这些`区块链`通过`链钥密码学`进行交互。
 - A blockchain is a growing list of cryptographically linked blocks, agreed upon by consensus. On the Internet Computer every subnet is a blockchain and these blockchains interact using chain key cryptography.
 
 ```
@@ -88,6 +92,7 @@ Candid: Candid
 Canister: 容器
 ```
 
+- `容器`是一种集合了代码和状态的`智能合约`。一个`容器`可以作为智能合约被部署在`互联网计算机`上，而且可以通过互联网来做交互。
 - A canister is a type of smart contract that bundles code and state. A canister can be deployed as a smart contract on the Internet Computer and accessed over the Internet.
 
 ```
