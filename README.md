@@ -10,12 +10,23 @@ By `Paul Liu`, `Andrew Tang`, `Vincent Zhang`, `Qi Jia`, `Herbert Yang`, DFINITY
 
 ## A 
 
-### Account: `账号`
+```
+Account: 账号
+```
+
 - A ledger account is a set of entries in the ledger canister, which is a smart contract that mimics the guise and behavior of a regular banking account, whose unit of measure is ICP (Internet Computer Protocol) utility tokens. Ledger accounts are owned by principals, and their ownerships do not change over time. Every account on the ledger has a positive balance measured in ICP with a precision of eight decimals.
 
-### Address: `地址`
+```
+Address: 地址
+```
 
-### Actor Model: `参与者模式`
+- In the context of transactions on the ledger, address is synonymous with account.
+
+```
+Actor Model: 参与者模式
+```
+
+- An actor is a primitive in the Actor Model. It is a process with encapsulated state that communicates with other concurrently running actors through asynchronous messages that are received sequentially. The Actor Model is relevant to the IC because canisters on the IC (a type of smart contract) follow the Actor Model for concurrent and asynchronous computation.
 
 ## B
 
