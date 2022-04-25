@@ -24,15 +24,15 @@ By [Paul Liu](https://github.com/ninegua), [Andrew Tang](https://twitter.com/and
   
 6. 无能力翻译的词汇：
   
-  1. Canister Account
+  - 1. Canister Account
     
-  2. Node Operators
+  - 2. Node Operators
     
-  3. P2P
+  - 3. P2P
     
-  4. State Manager
+  - 4. State Manager
     
-  5. WebAssembly: WebAssembly
+  - 5. WebAssembly: WebAssembly
     
 
 ## A
