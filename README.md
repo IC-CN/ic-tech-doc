@@ -72,21 +72,21 @@ Autonomous: 自主
 Balance: 余额
 ```
 
-- 余额是账本中所有存款总额减去所有取款总额。某些情况中，一个不在账本中的账户余额为0是有必要的。账本帐户的余额是ICP的标价，并以八位小数表示。因此，一个账户的最小正余额是0.00000001或10^-8 ICP;这个数量有时被称为一个e8。
+- `余额`是`账号`中的存款总额减去取款总额。某些情况中，必要时可以说一个不在`账本`中的`账号``余额`为零。`账本``帐号`的`余额`以包括小数点后八位数的`ICP`衡量。一个`账号`的最小`余额`是`0.00000001`或`10^-8` ICP。这个数量有时被称为一个`e8`。
 - The balance of an account on the ledger is the sum of all deposits minus the sum of all withdrawals. As a degenerate case, it is sometimes useful to say that an account which is not present in the ledger has a balance of zero. The balance of a ledger account is denominated in ICP and is represented with eight decimals. Thus, the minimum positive balance of an account is 0.00000001 or 10^-8 ICP; this amount is sometimes referred to as one e8.
 
 ```
 Beneficiary: 账号持有者
 ```
 
-- `账号持有者` 是拥有`账号`余额的`主体`。`账号持有者`不能被变更。一个`账号持有者`有可能被允许对`账号`进行交易操作（见`账号受托者`）。
+- `账号持有者` 是拥有`账号``余额`的`主体`。`账号持有者`不能被变更。一个`账号持有者`有可能被允许对`账号`进行交易操作（见`账号受托者`）。
 - The beneficiary of an account is the principal who owns the balance of the account. The beneficiary of an account cannot be changed. The beneficiary of an account may or may not be allowed to make transactions on the account (see fiduciary).
 
 ```
 Blockchain: 区块链
 ```
 
-- `区块链`是一列不断扩展的，通过加密技术链接在一起，经过`共识协议`确认的的很多区块的集合。在`互联网计算机`上，每个`子网`都是一条`区块链`，这些`区块链`通过`链钥密码学`进行交互。
+- `区块链`是一列通过加密技术链接在一起不断扩展的，经过`共识协议`确认的的很多区块的集合。在`互联网计算机`上，每个`子网`都是一条`区块链`，这些`区块链`通过`链钥密码学`进行交互。
 - A blockchain is a growing list of cryptographically linked blocks, agreed upon by consensus. On the Internet Computer every subnet is a blockchain and these blockchains interact using chain key cryptography.
 
 ```
@@ -101,7 +101,7 @@ Blockchain Singularity: 区块链奇点
 Boundary Nodes: 边界节点
 ```
 
-- IC（Internet Computer)的Nginx网关，这些Nodes用于充当HTTP路由器，通过他们可以到达各子网区块节点。`边界节点（Boundary Nodes）`有几个用途：他有助于*discover-ability*（ic0.dapp将域名指向一组`边界节点（Boundary Nodes）`），他们是*geo-aware*可以通将传入的请求转发至最近的子网节点上。它们可以用于承余额的查询与交易工作。他们在内容分发网络中作为验证加密数据缓存工作。它们可以抑制来自外部IP地址的过度交互，引导/安装service worker，它们还可以帮助保护子网免受DDoS攻击。
+- `边界节点` 相当于`互联网计算机`的Nginx网关，这些节点作为HTTP路由器，确保网络中的子网区块链节点可以被到达。`边界节点（Boundary Nodes）`有几个用途：他有助于*discover-ability*（ic0.dapp将域名指向一组`边界节点（Boundary Nodes）`），他们是*geo-aware*可以通将传入的请求转发至最近的子网节点上。它们可以用于承余额的查询与交易工作。他们在内容分发网络中作为验证加密数据缓存工作。它们可以抑制来自外部IP地址的过度交互，引导/安装service worker，它们还可以帮助保护子网免受DDoS攻击。
 - Nginx gateways to the internet computer. These nodes act as HTTP routers through which the network’s subnet blockchain nodes can be reached. The boundary nodes have several purposes: they aid in discover-ability (the ic0.app domain name points to a set of boundary nodes), they are geo-aware and can route incoming requests to the nearest subnet node that hosts the canister involved, they can help load balance query transactions, they can cache cryptographically verified data in the role of a content distribution network, they can throttle excessive interactions from an outside IP address, bootstrapping/Installing the service worker, and they can help protect subnets from DDoS attacks.
 
 ```
@@ -710,6 +710,10 @@ Threshold Signature： 阈值签名
 
 ```
 Throughput: 吞吐
+```
+
+```
+Token: 令牌
 ```
 
 ```
