@@ -41,21 +41,21 @@ By [Paul Liu](https://github.com/ninegua), [Andrew Tang](https://twitter.com/and
 Account: 账号
 ```
 
-- 帐号是分类账本容器（Ledger Canister）中的账号字段，它是一种智能合约，模仿了常规银行帐户的伪装和行为，其度量单位是ICP (Internet Computer Protocol)token。账户由所有者主体（principals）拥有，其所有权不会随时间而改变。账本账号的每个账户都有一个正余额，在ICP中数字精度为小数点后8位。
+- 帐号是`分类账本容器` （Ledger Canister）中的条目组合，是一种智能合约，模仿了常规银行帐户的行为，用`IC`的原生设施令牌`ICP`（Internet Computer Protocol）作为度量单位。账号由`主体`（Principal）拥有，其所有权不会随时间而改变。每个账号都有一个正余额，精确到`ICP`小数点后8位。
 - A ledger account is a set of entries in the ledger canister, which is a smart contract that mimics the guise and behavior of a regular banking account, whose unit of measure is ICP (Internet Computer Protocol) utility tokens. Ledger accounts are owned by principals, and their ownerships do not change over time. Every account on the ledger has a positive balance measured in ICP with a precision of eight decimals.
 
 ```
 Address: 地址
 ```
 
-- 在谈论`账本`的时候，`地址` 跟`账号`是同一个意思。
+- 在谈论`账本`的时候，`地址`跟`账号`是同一个意思。
 - In the context of transactions on the ledger, address is synonymous with account.
 
 ```
 Actor Model: 参与者模式
 ```
 
-- Actor是参与者模式```Actor Model```中的原语。它是一个封装了的进程，通过顺序接收异步消息，并与其他必发运行的参与者（Actor）进行通信。参与者模式（Actor Model）与IC相关。因为IC中的容器（Canister）遵循参与者模式（Actor Model）进行并发与异步计算。
+- `参与者`（Actor）是`参与者模式`（Actor Model）中的原语。它是一个封装了的进程，通过顺序接收异步消息，并与其他并发运行的`参与者`进行通信。`参与者模式`与`IC`的关联之处在于`IC`中的`容器`（Canister）遵循`参与者模式`（Actor Model）进行并发与异步计算。
 - An actor is a primitive in the Actor Model. It is a process with encapsulated state that communicates with other concurrently running actors through asynchronous messages that are received sequentially. The Actor Model is relevant to the IC because canisters on the IC (a type of smart contract) follow the Actor Model for concurrent and asynchronous computation.
 
 ```
