@@ -108,7 +108,7 @@ Boundary Nodes: 边界节点
 Burning Transaction: 销毁交易
 ```
 
-- 销毁交易是ICP“销毁”的过程，在这个过程中一定数量的ICP 被销毁，，他主要用于购买Cycles，当一定数量的ICP被销毁的同时会产生对应数量的 Cycles，对应的汇率为：1 ICP或（SDR)兑换1T（10E12)Cycles。它表示为从来源帐户到ICP供应帐户的一笔交易。
+- 销毁交易是ICP“销毁”的过程，在这个过程中一定数量的ICP 被销毁，，他主要用于购买Cycles，当一定数量的ICP被销毁的同时会产生对应数量的 Cycles，对应的汇率为：1 ICP或（SDR)兑换1T（10E12)Cycles。它表示为从来源`账号`到ICP供应`帐号`的一笔交易。
 - A burning transaction is the process of "burning" ICP, whereby a certain amount of ICP are destroyed. The main use case is that of purchasing cycles, through which ICP are destroyed while at the same time a corresponding amount of cycles is created, using the current exchange rate between ICP and ( SDR), in such a way that one SDR corresponds to one trillion (10E12) cycles. It is represented as a transaction from the source account to the ICP supply account.
 
 ## C
@@ -213,7 +213,7 @@ Cross-Subnet Messages：跨子网消息
 Cycles: Cycles
 ```
 
-- 在 IC上，Cycle是以处理、内存、存储和网络带宽的形式消耗的资源的计量单位。 每个容器都有一个Cycles帐户，对容器消耗的资源进行收费。 IC的```虚拟货币（ utility token）``` (ICP) 可以转换为cycles并转移到容器（Canister）中。 Cycle也可以通过将它们附加到 [inter-canister] 消息在容器之间转移，也可以在容器之间传输Cycle。 ICP 始终可以使用以 [SDR] 衡量的当前 ICP 价格转换为Cycles，使用1T ycles对应一个 SDR 的汇率。
+- 在 IC上，Cycle是以处理、内存、存储和网络带宽的形式消耗的资源的计量单位。 每个容器都有一个Cycles`帐号`，对容器消耗的资源进行收费。 IC的```虚拟货币（ utility token）``` (ICP) 可以转换为cycles并转移到容器（Canister）中。 Cycle也可以通过将它们附加到 [inter-canister] 消息在容器之间转移，也可以在容器之间传输Cycle。 ICP 始终可以使用以 [SDR] 衡量的当前 ICP 价格转换为Cycles，使用1T ycles对应一个 SDR 的汇率。
 - On the Internet Computer, a cycle is the unit of measurement for resources consumed in the form of processing, memory, storage, and network bandwidth. Every canister has a cycles account to which resources consumed by the canister are charged. The Internet Computer’s utility token (ICP) can be converted to cycles and transferred to a canister. Cycles can also be transferred between canisters by attaching them to an [inter-canister] message. ICP can always be converted to cycles using the current price of ICP measured in [SDR] using the convention that one trillion cycles correspond to one SDR.
 
 ## D
@@ -292,7 +292,7 @@ Fast Forwarding: 快进
 Fiduciary: 账号受托者
 ```
 
-- 账户的受托人是被允许在账户上进行交易的委托人；因此，将其视为帐户的所有者可能会更好理解，但需要注意的是，它不一定是帐户的受益人。神经元账户就是一个突出范例，受益人和受托人不一致**coincide**（受托人是治理容器，受益人是神经元持有人）。账本账户的受托人不会随着时间而改变。受托人和受益人的区别在于，对于与IC账本交互的DeFi dapp（容器）非常重要，在这种情况下，受托人是DeFi容器，而受益人是使用DeFi容器服务的个人或组织.
+- 账户的受托人是被允许在账户上进行交易的委托人；因此，将其视为`帐号`的所有者可能会更好理解，但需要注意的是，它不一定是`帐号`的受益人。神经元账户就是一个突出范例，受益人和受托人不一致**coincide**（受托人是治理容器，受益人是神经元持有人）。账本账户的受托人不会随着时间而改变。受托人和受益人的区别在于，对于与IC账本交互的DeFi dapp（容器）非常重要，在这种情况下，受托人是DeFi容器，而受益人是使用DeFi容器服务的个人或组织.
 - The fiduciary of an account is the principal allowed to make transactions on the account; as such, it may be useful to think of it as the owner of the account, with the caveat that it may or may not be the beneficiary of the account. The neuron account is a prominent example of an account for which the beneficiary and fiduciary do not coincide (the fiduciary is the governance canister while the beneficiary is the neuron holder). The fiduciary of a (ledger) account does not change over time. The distinction between fiduciary and beneficiary is also important for DeFi dapps (canisters) that interact with the IC ledger: in this case, the fiduciary is the DeFi canister while the beneficiary is the individual or organization that uses the DeFi canister’s services.
 
 ```
@@ -485,14 +485,14 @@ Network Nervous System (NNS): 网络神经系统
 Neuron: 神经元
 ```
 
-- 神经元是一种 IC 实体，可以提出提案并对IC平台治理相关的提案进行投票。 为了提供负责任的治理，以保持系统稳定，神经元需要存储一定数量的 ICP（“stake”），以便提出提案并对其进行投票。 这会将代币锁定一段时间，然后开始溶解。 一个神经元的 ICP 权益存储在一个神经元帐户中。 神经元所有者有权对治理问题提出建议和投票，并根据所质押的 ICP 数量和解散期限的持续时间获得投票奖励。
+- 神经元是一种 IC 实体，可以提出提案并对IC平台治理相关的提案进行投票。 为了提供负责任的治理，以保持系统稳定，神经元需要存储一定数量的 ICP（“stake”），以便提出提案并对其进行投票。 这会将代币锁定一段时间，然后开始溶解。 一个神经元的 ICP 权益存储在一个神经元`帐号`中。 神经元所有者有权对治理问题提出建议和投票，并根据所质押的 ICP 数量和解散期限的持续时间获得投票奖励。
 - A neuron is an IC entity that can make proposals and vote on proposals related to the governance of the Internet Computer platform. To provide the stability required for responsible governance, neurons need to store ("stake") a certain amount of ICP in order to be able to make and vote on proposals. This locks the tokens for a period of time, after which it starts dissolving. The ICP stake of a neuron is stored in a neuron account. The neuron owner has the right to propose and vote on governance issues, and is granted rewards for voting in proportion to the amount of ICP staked, and the duration of the dissolve period.
 
 ```
 Neuron Account: 神经元账号
 ```
 
-- 神经元帐户是一个容器帐户，其受益人是神经元（或神经元的所有者）。 治理容器是所有神经元账户的受托人。
+- 神经元`帐号`是一个`容器``帐号`，其受益人是神经元（或神经元的所有者）。 治理容器是所有神经元账户的受托人。
 - A neuron account is a canister account whose beneficiary is a neuron (or the neuron’s owner). The governance canister is the fiduciary of all neuron accounts.
 
 ```
